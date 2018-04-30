@@ -1,0 +1,98 @@
+% \documentclass[table]{beamer}
+% \documentclass[table,handout]{beamer}
+% \setbeameroption{show notes}
+% \setbeameroption{hide notes}
+% \setbeameroption{show only notes}
+\usepackage{varwidth}
+
+\newif\ifhide
+\newif\ifpost
+\newif\ifhideclicker
+
+\hidetrue
+% \hideclickertrue
+% \posttrue
+
+\newcommand{\whiteout}[1]{\textcolor{white}{#1}}
+% \newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
+% \newcommand{\notebox}[1]{\fcolorbox{blue}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{#1}}}
+\newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\linewidth}{\whiteout{#1}}}}
+\newcommand{\notebox}[1]{\fcolorbox{blue}{white}{\parbox{\linewidth}{#1}}}
+\newcommand{\blankbox}[1]{\phantom{\varwidth{\linewidth}\whiteoutbox{#1}\endvarwidth}}
+\newcommand{\blank}[1]{\phantom{\varwidth{\linewidth}#1\endvarwidth}}
+
+\ifhide%
+    \newcommand{\hmask}[1]{\blank{#1}}%
+\else%
+    \newcommand{\hmask}[1]{#1}%
+\fi
+
+\ifhide%
+    \newcommand{\cmask}[1]{\blank{#1}}%
+\else%
+    \newcommand{\cmask}[1]{\textcolor{blue}{#1}}%
+\fi
+
+\ifhide%
+    \newcommand{\wout}[1]{\whiteout{#1}}%
+\else%
+    \newcommand{\wout}[1]{#1}%
+\fi
+
+\ifhide%
+    \newcommand{\hignore}[1]{}%
+\else%
+    \newcommand{\hignore}[1]{#1}%
+\fi
+
+\ifpost%
+    \newcommand{\nopost}[1]{}%
+\else%
+    \newcommand{\nopost}[1]{#1}%
+\fi
+
+\ifhideclicker%
+    \newcommand{\clickerslide}[1]{\stepcounter{clickerQuestionCounter}%
+        \begin{frame}[t]
+            \textcolor{blue}{Q \arabic{clickerQuestionCounter}:}
+        \end{frame}}
+\else%
+    \newcommand{\clickerslide}[1]{#1}%
+\fi
+
+\ifhideclicker%
+    \newcommand{\clickerpost}[1]{\stepcounter{clickerQuestionCounter}%
+        \begin{frame}[t]
+            \textcolor{blue}{Q \arabic{clickerQuestionCounter}:}
+        \end{frame}}
+\else%
+    \newcommand{\clickerpost}[1]{\stepcounter{clickerQuestionCounter}#1}%
+\fi
+
+\ifhide%
+    \newcommand{\hidebox}[1]{\blank{#1}}%
+\else%
+    \newcommand{\hidebox}[1]{\notebox{#1}}%
+\fi
+
+\ifhide%
+    \newcommand{\wbox}[1]{\whiteoutbox{#1}}%
+\else%
+    \newcommand{\wbox}[1]{\notebox{#1}}%
+\fi
+
+\ifhide%
+    \newcommand{\nbox}[1]{\blankbox{#1}}%
+\else%
+    \newcommand{\nbox}[1]{\notebox{#1}}%
+\fi
+
+\ifhideclicker%
+    \newcommand{\clickeranswer}[1]{#1}%
+\else%
+    \ifhide%
+        \newcommand{\clickeranswer}[1]{#1}%
+    \else%
+        \newcommand{\clickeranswer}[1]{\textbf{\textcolor{blue}{#1}}}%
+    \fi
+\fi

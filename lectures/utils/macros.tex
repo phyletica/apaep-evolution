@@ -1,0 +1,46 @@
+\newcommand{\highlight}[1]{\textcolor{violet}{\textit{\textbf{#1}}}}
+\newcommand{\super}[1]{\ensuremath{^{\textrm{\sffamily #1}}}}
+\newcommand{\sub}[1]{\ensuremath{_{\textrm{\sffamily #1}}}}
+\newcommand{\dC}{\ensuremath{^\circ{\textrm{C}}}\xspace}
+\newcommand{\degree}{\ensuremath{^\circ}\xspace}
+\newcommand{\tb}{\hspace{2em}}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\myHangIndent}{\hangindent=5mm}
+
+\newcommand{\spp}[1]{\textit{#1}}
+
+\newcommand\mybullet{\leavevmode%
+\usebeamertemplate{itemize item}\hspace{.5em}}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\newcommand{\blankslide}{{\setbeamercolor{background canvas}{bg=black}
+\setbeamercolor{whitetext}{fg=white}
+\begin{frame}<handout:0>[plain]
+\end{frame}}}
+
+\newcommand{\whiteslide}{
+\begin{frame}<handout:0>[plain]
+\end{frame}}
+
+\newcommand{\f}[1]{\ensuremath{F_{#1}}}
+\newcommand{\x}[1]{X\ensuremath{^{#1}}}
+\newcommand{\y}[1]{Y\ensuremath{^{#1}}}
+
+% Population growth macros
+\newcommand{\popsize}[1]{\ensuremath{N_{#1}}}
+\newcommand{\popgrowthratediscrete}[1]{\ensuremath{\lambda_{#1}}}
+\newcommand{\popgrowthrate}[1]{\ensuremath{r_{#1}}}
+\newcommand{\ptime}{\ensuremath{t}\xspace}
+
+\tikzset{hide on/.code={\only<#1>{\color{white}}}}
+\tikzset{
+    invisible/.style={opacity=0},
+    visible on/.style={alt={#1{}{invisible}}},
+    alt/.code args={<#1>#2#3}{%
+        \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}
+        % \pgfkeysalso doesn't change the path
+    },
+}
