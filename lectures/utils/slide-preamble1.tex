@@ -1,6 +1,6 @@
 % \documentclass[table]{beamer}
-% \documentclass[table,handout]{beamer}
-% \setbeameroption{show notes}
+\documentclass[table,handout]{beamer}
+\setbeameroption{show notes}
 % \setbeameroption{hide notes}
 % \setbeameroption{show only notes}
 \usepackage{varwidth}
@@ -9,9 +9,9 @@
 \newif\ifpost
 \newif\ifhideclicker
 
-\hidetrue
+% \hidetrue
 % \hideclickertrue
-% \posttrue
+\posttrue
 
 \newcommand{\whiteout}[1]{\textcolor{white}{#1}}
 % \newcommand{\whiteoutbox}[1]{\fcolorbox{white}{white}{\parbox{\dimexpr \linewidth-2\fboxsep-2\fboxrule}{\whiteout{#1}}}}
@@ -49,6 +49,12 @@
     \newcommand{\nopost}[1]{}%
 \else%
     \newcommand{\nopost}[1]{#1}%
+\fi
+
+\ifpost%
+    \newcommand{\maskpost}[1]{\blank{#1}}%
+\else%
+    \newcommand{\maskpost}[1]{#1}%
 \fi
 
 \ifhideclicker%

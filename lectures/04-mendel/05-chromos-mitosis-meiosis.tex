@@ -1,0 +1,291 @@
+\input{../utils/slide-preamble1.tex}
+\input{../utils/slide-preamble2.tex}
+\input{../utils/macros.tex}
+\bibliography{../bib/references}
+\input{../utils/title-info.tex}
+
+\title[Mitosis \& Meiosis]{Mitosis \& Meiosis}
+% \date{\today}
+% \date{April 7, 2015}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{frame}[t]
+\frametitle{Today's issues:}
+% \tableofcontents[subsectionstyle=hide]
+\begin{enumerate}
+    % \item How are alleles from different genes transmitted to offspring
+    %     (together, or independently of each other?
+    \item What is the physical basis of Mendel's rules?
+        \begin{enumerate}
+            \item Mitosis: How cells divide during asexual reproduction and
+                during growth
+            \item Meiosis: How cells divide prior to formation of eggs and
+                sperm (sexual reproduction)
+        \end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+\section{The physical basis of Mendel's rules}
+
+\begin{frame}[t]
+    \begin{itemize}
+        \item To understand the physical basis of Mendel's rules and how
+            genetic variation is generated in populations, we need to examine
+            two types of cell division that were first described in the late
+            1800s---mitosis and meiosis. 
+
+            \vspace{5mm}
+        \item But first!
+            \begin{itemize}
+                \item What are chromosomes (``colored bodies'')?
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Chromosomes}
+
+\begin{frame}
+    \begin{itemize}
+        \item Chromosomes come in different types, distinguished by size and
+            shape (morphology). Draw 5:
+        \vspace{4cm}
+        \item In many organisms, there are 2 of each type of chromosome
+            present. Draw the second of each type (above).
+        \item Pairs of each type are said to be homologous (they are homologs).
+            Circle the 5 pairs of homologs.
+    \end{itemize}
+
+    \note[item]{Draw 5 different types of ``lines''}
+    \note[item]{Add a matching to each of the 5, making total of 10}
+    \note[item]{Circle the ``identical pairs''}
+    \note[item]{\textbf{Ask:} Ploidy? Haploid or diploid?}
+    \note[item]{\textbf{Ask:} Haploid number?}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Key notation:}
+    \begin{itemize}
+        \item Use $n$ to indicate the \highlight{number of different types} of
+            chromosomes found in a species
+        \item Use a numeral before the $n$ to indicate \highlight{the number of
+                each type} present
+        \item Which is the ploidy?
+            \nbox{\highlight{the number of each type}; the number before $n$;
+                e.g., $\highlight{2}n=46$}
+        \item Which is the haploid number?
+            \nbox{\highlight{the number of different types ($n$)}; e.g.,
+                $2\highlight{n}=46$, $\highlight{n=23}$}
+        \item What's the difference between a homolog and a chromatid?
+            \nbox{Homologs are separate chromosomes (from different parents;
+                \highlight{different genetic info}).  Sister chromatids are
+                identical copies and are physically connected as a single
+                chromosome.}
+    \end{itemize}
+\end{frame}
+
+\clickerslide{
+\begin{frame}[t]
+    \vspace{-3mm}
+    \begin{clickerquestion}
+        \item What is the haploid number and ploidy of this cell?
+    \end{clickerquestion}
+    \vspace{-1mm}
+    \begin{center} 
+        \includegraphics[width=0.7\textwidth]{../images/chromosomes.pdf}
+    \end{center}
+    \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l c l }
+            & Haploid \# & Ploidy \\
+            \hline
+            \textcolor{red}{1)} & \clickeranswer{5} & \clickeranswer{3 (triploid)} \\ 
+            \textcolor{red}{2)} & 15 & 1 (haploid) \\ 
+            \textcolor{red}{3)} & 15 & 2 (diploid) \\ 
+            \textcolor{red}{4)} & 15 & 3 (triploid) \\ 
+            \textcolor{red}{5)} & 30 & 1 (haploid) \\ 
+        \end{tabular}
+    \end{table}
+\end{frame}
+}
+
+\begin{frame}[b]
+    \begin{center} 
+        \includegraphics[width=0.65\textwidth]{../images/chromosomes.pdf}
+    \end{center}
+    \vspace{-3mm}
+\end{frame}
+
+\begin{frame}[t]
+    \begin{adjustwidth}{-2em}{-2em}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{0.45\linewidth} p{0.45\linewidth} }
+            Draw a haploid set of unreplicated chromosomes in a species where
+            $n=6$: &
+            \hmask{\highlight{\small Draw 6 ``threads'', each a distinct
+                    size/shape}} \\[3ex]
+            Draw the unreplicated chromosomes of a diploid cell in a species
+            where $n=5$ and $2n=10$: &
+            \hmask{\highlight{\small Draw 5 ``threads'', each with a distinct
+                    size/shape, then draw a second ``thread'' of each type for
+                    a total of 10}} \\[3ex]
+            Draw the replicated chromosomes of a diploid cell in a species
+            where $n=3$ and $2n=6$: &
+            \hmask{\highlight{\small Draw 3 ``double-threads'', each with a
+                    distinctive size/shape, then draw a second of each type for
+                    a total of 6 ``double-threads''}} \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+\end{frame}
+
+\clickerslide{
+\begin{frame}
+    \begin{clickerquestion}
+        \item Prior to DNA replication of the chromosomes, a cell has $2n=6$
+            chromosomes. What is the ploidy and haploid number of the cell
+            after the chromosomes replicate?
+    \end{clickerquestion}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ l c l }
+            & Haploid \# & Ploidy \\
+            \hline
+            \textcolor{red}{1)} & \clickeranswer{3} & \clickeranswer{2 (diploid)} \\ 
+            \textcolor{red}{2)} & 6 & 2 (diploid) \\ 
+            \textcolor{red}{3)} & 12 & 2 (diploid) \\ 
+            \textcolor{red}{4)} & 12 & 1 (haploid) \\ 
+            \textcolor{red}{5)} & 3 & 4 (tetraploid) \\ 
+        \end{tabular}
+    \end{table}
+    \nbox{The cell is still diploid; the only difference is that the
+        chromosomes are now comprised of sister chromatids}
+\end{frame}
+}
+
+
+\subsection{Mitosis}
+
+\begin{frame}[t]
+    \frametitle{An overview of mitosis}
+        \vspace{-3mm}
+        \highlight{Mitosis:} The process responsible for asexual reproduction and
+            growth in multicellular organisms. 
+    \begin{adjustwidth}{-3em}{-3em}
+
+    \vspace{1mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{0.45\linewidth} p{0.45\linewidth} }
+            Draw $2n=4$ (unreplicated) & \\[5ex]
+            Chromosomes replicate & \\[5ex]
+            Chromosomes line up & \\[5ex]
+            Sister chromatids separate & \\[5ex]
+            Cell divides & \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+    What is the ploidy of the daughter cells? \hmask{\highlight{Diploid!}}
+    \note[item]{Note: cytokinesis is independent of mitosis---ask what happens
+        if you get mitosis without cytokinesis}
+\end{frame}
+
+
+\subsection{Meiosis}
+
+\begin{frame}
+    \highlight{Meiosis:} The process responsible for sexual reproduction in
+    multicellular organisms.
+
+    \vspace{4mm}
+    \begin{itemize}
+        \item How does it happen?
+
+        \vspace{4mm}
+        \item \highlight{NOTE:} Meiosis consists of two divisions
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{An overview of meiosis I}
+    \begin{adjustwidth}{-3em}{-3em}
+
+        \vspace{-3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{0.45\linewidth} p{0.45\linewidth} }
+            Draw $2n=4$ (unreplicated) & \\[5ex]
+            Chromosomes replicate & \\[5ex]
+            {\small Homologs synapse; crossing over occurs} & \\[5ex]
+            Homologs line up & \\[5ex]
+            Homologs pull apart & \\[5ex]
+            Cell divides & \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+    \vspace{3mm}
+    What is the ploidy of the daughter cells? \hmask{\highlight{Haploid!}}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{An overview of meiosis II (same in both daughter cells)}
+    \begin{adjustwidth}{-3em}{-3em}
+
+        \vspace{-1mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{0.45\linewidth} p{0.45\linewidth} }
+            Chromosomes line up & \\[12ex]
+            Sister chromatids pull apart & \\[12ex]
+            Cell divides & \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+    \vspace{1.5cm}
+    What is the ploidy of the daughter cells? \hmask{\highlight{Haploid!}}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{What are the consequences of mitosis and meiosis?}
+        \vspace{-4mm}
+        Fill out table based on our examples of diploid cells:
+    \begin{adjustwidth}{-3em}{-3em}
+
+        \vspace{3mm}
+    \begin{table}%[htbp]
+        \centering
+        \begin{tabular}{ p{0.12\linewidth} | p{0.38\linewidth} | p{0.38\linewidth} }
+            & Mitosis & Meiosis \\
+            \hline
+            Start & \hmask{\highlight{Diploid cell with replicated chromosomes}} & 
+                    \hmask{\highlight{Diploid cell with replicated chromosomes}} \\[3ex]
+            \hline
+            End & \hmask{\highlight{2 diploid cells with unreplicated chromosomes}} & 
+                    \hmask{\highlight{4 haploid cells with unreplicated chromosomes}} \\[3ex]
+            \hline
+            {\scriptsize Chromosomes same or different as parent cell?} & \hmask{\highlight{Same}} & \hmask{\highlight{Different}} \\
+        \end{tabular}
+    \end{table}
+    \end{adjustwidth}
+\end{frame}
+
+\end{document}
+
+\begin{frame}
+    \begin{clickerquestion}
+        \item 
+        \begin{clickeroptions}
+            \item 
+            \item 
+            \item 
+            \item 
+        \end{clickeroptions}
+    \end{clickerquestion}
+\end{frame}

@@ -7,7 +7,8 @@
 
 \title[Human Genetic Disease]{Human Genetic Disease}
 % \date{\today}
-\date{March 28, 2018}
+% \date{March 28, 2018}
+\date{}
 
 \begin{document}
 
@@ -134,8 +135,9 @@
 
 \clickerslide{
 \begin{frame}
+    \vspace{-2mm}
     \begin{centering}
-    \begin{tikzpicture}[font=\footnotesize]
+    \begin{tikzpicture}[scale=1.2,font=\footnotesize]
         % 1st Gen
         \node(G1M)[male,label=left: {Male}]{} 
             child[mright,mate]{coordinate(G1X1) child{node(G1F)[afemale,label=right: {Female}]{}}}
@@ -187,8 +189,9 @@
 
 \clickerslide{
 \begin{frame}
+    \vspace{-2mm}
     \begin{centering}
-    \begin{tikzpicture}[font=\footnotesize]
+    \begin{tikzpicture}[scale=1.1,font=\footnotesize]
         % 1st Gen
         \node(G1M)[amale,label=left: {Male}]{} 
             child[mright,mate]{coordinate(G1X1) child{node(G1F)[female,label=right: {Female}]{}}}
@@ -279,15 +282,17 @@
 \begin{frame}
     \begin{description}
         \item[Hypothesis:] \ \\
+            \maskpost{%
             \uncover<2->{Individuals who are heterozygous for the recessive CF
-                disease allele are protected against typhoid fever.}
+                disease allele are protected against typhoid fever.}}
 
         \vspace{0.5cm}
         \item[Experiment:] \ \\
+            \maskpost{%
             \uncover<3->{Create mouse cells that have zero (homozygous
                 dominant) one (heterozygous) and two (homozygous recessive)
                 copies of the CFTR allele that causes CF, and expose them to
-                \emph{S.\ typhi}.}
+                \emph{S.\ typhi}.}}
     \end{description}
 
     \begin{itemize}
